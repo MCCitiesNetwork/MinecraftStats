@@ -44,6 +44,7 @@ public class JSONConfig extends Config {
             setMinPlaytime(players.optInt("minPlaytime", getMinPlaytime()));
             setUpdateInactive(players.optBoolean("updateInactive", isUpdateInactive()));
             setProfileUpdateInterval(players.optInt("profileUpdateInterval", getProfileUpdateInterval()));
+            setProfileAPI(players.optString("profileAPI", getProfileAPI()));
 
             setExcludeBanned(players.optBoolean("excludeBanned", isExcludeBanned()));
             setExcludeOps(players.optBoolean("excludeOps", isExcludeOps()));

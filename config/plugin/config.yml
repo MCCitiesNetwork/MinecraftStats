@@ -19,6 +19,7 @@ players:
   inactiveDays: 90
   updateInactive: true
   profileUpdateInterval: 3
+  profileAPI: "mojang"
   minPlaytime: 60
   excludeBanned: true
   excludeOps: false

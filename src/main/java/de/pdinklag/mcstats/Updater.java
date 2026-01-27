@@ -60,7 +60,12 @@ public abstract class Updater {
     private final Path dbPlayerlistPath;
 
     protected PlayerProfileProvider getAuthenticProfileProvider() {
-        return new MojangAPIPlayerProfileProvider(log);
+        final String api = config.getProfileAPI();
+        if ("minetools".equalsIgnoreCase(api)) {
+            return new MinetoolsAPIPlayerProfileProvider(log);
+        } else {
+            return new MojangAPIPlayerProfileProvider(log);
+        }
     }
 
     protected void gatherLocalProfileProviders(PlayerProfileProviderList providers) {

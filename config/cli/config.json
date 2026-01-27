@@ -28,6 +28,7 @@
         "inactiveDays": 7,
         "updateInactive": false,
         "profileUpdateInterval": 3,
+        "profileAPI": "mojang",
         "minPlaytime": 60,
         "excludeBanned": true,
         "excludeOps": false,

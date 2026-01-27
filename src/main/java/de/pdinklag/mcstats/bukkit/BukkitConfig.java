@@ -38,6 +38,7 @@ public class BukkitConfig extends Config {
         setMinPlaytime(bukkitConfig.getInt("players.minPlaytime", getMinPlaytime()));
         setUpdateInactive(bukkitConfig.getBoolean("players.updateInactive", isUpdateInactive()));
         setProfileUpdateInterval(bukkitConfig.getInt("players.profileUpdateInterval", getProfileUpdateInterval()));
+        setProfileAPI(bukkitConfig.getString("players.profileAPI", getProfileAPI()));
 
         setExcludeBanned(bukkitConfig.getBoolean("players.excludeBanned", isExcludeBanned()));
         setExcludeOps(bukkitConfig.getBoolean("players.excludeOps", isExcludeOps()));

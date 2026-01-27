@@ -31,6 +31,8 @@ public class Config {
     private int playerCacheUUIDPrefix = 2;
     private String defaultLanguage = "en";
 
+    private String profileAPI = "mojang";
+
     public Config() {
     }
 
@@ -176,5 +178,13 @@ public class Config {
 
     public void setEventsPath(Path eventsPath) {
         this.eventsPath = eventsPath;
+    }
+
+    public String getProfileAPI() {
+        return profileAPI;
+    }
+
+    public void setProfileAPI(String profileAPI) {
+        this.profileAPI = profileAPI;
     }
 }
