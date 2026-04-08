@@ -1,19 +1,19 @@
 package de.pdinklag.mcstats;
 
-import de.pdinklag.mcstats.minetools.API;
-import de.pdinklag.mcstats.minetools.APIRequestException;
-import de.pdinklag.mcstats.minetools.EmptyResponseException;
+import de.pdinklag.mcstats.playerdb.API;
+import de.pdinklag.mcstats.playerdb.APIRequestException;
+import de.pdinklag.mcstats.playerdb.EmptyResponseException;
 
 /**
- * Provides player profiles via the Minetools.eu API.
+ * Provides player profiles via the PlayerDB API.
  */
-public class MinetoolsAPIPlayerProfileProvider implements PlayerProfileProvider {
+public class PlayerDBAPIPlayerProfileProvider implements PlayerProfileProvider {
     private final LogWriter log;
 
     /**
      * Constructs a new provider.
      */
-    public MinetoolsAPIPlayerProfileProvider(LogWriter log) {
+    public PlayerDBAPIPlayerProfileProvider(LogWriter log) {
         this.log = log;
     }
 
@@ -27,7 +27,7 @@ public class MinetoolsAPIPlayerProfileProvider implements PlayerProfileProvider 
             } catch (EmptyResponseException e) {
                 player.setAccountType(AccountType.OFFLINE);
             } catch (APIRequestException e) {
-                log.writeError("Minetools.eu API profile request for player failed: " + player.getUuid(), e);
+                log.writeError("PlayerDB API profile request for player failed: " + player.getUuid(), e);
             }
         }
         return player.getProfile();

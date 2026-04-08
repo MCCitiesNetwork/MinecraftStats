@@ -61,8 +61,8 @@ public abstract class Updater {
 
     protected PlayerProfileProvider getAuthenticProfileProvider() {
         final String api = config.getProfileAPI();
-        if ("minetools".equalsIgnoreCase(api)) {
-            return new MinetoolsAPIPlayerProfileProvider(log);
+        if ("playerdb".equalsIgnoreCase(api)) {
+            return new PlayerDBAPIPlayerProfileProvider(log);
         } else {
             return new MojangAPIPlayerProfileProvider(log);
         }

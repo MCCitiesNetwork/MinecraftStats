@@ -1,7 +1,7 @@
-package de.pdinklag.mcstats.minetools;
+package de.pdinklag.mcstats.playerdb;
 
 /**
- * An exception raised while processing a Minetools.eu API request.
+ * An exception raised while processing a PlayerDB API request.
  */
 public class APIRequestException extends RuntimeException {
     APIRequestException() {
